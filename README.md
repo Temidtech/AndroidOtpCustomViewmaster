@@ -12,8 +12,7 @@ repositories {
         jcenter()
     }
 }
-...
-``` Groovy
+... 
 dependencies {
 	        compile 'com.github.Temidtech:AndroidOtpCustomViewmaster:1.0'
 }
