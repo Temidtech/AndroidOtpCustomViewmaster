@@ -1,4 +1,5 @@
 # AndroidOtpCustomViewmaster
+[![](https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster.svg)](https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster)
 
 This is custom input widget for OTP and passwords. It's beautiful and easy to you!
 
