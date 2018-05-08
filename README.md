@@ -12,6 +12,7 @@ repositories {
         jcenter()
     }
 }
+...
 
 dependencies {
 	        compile 'com.github.Temidtech:AndroidOtpCustomViewmaster:1.0'
@@ -29,74 +30,99 @@ Include OtpCustomView in your layout.
 #### XML
 
 ``` xml
-<com.chaos.view.PinView
-    android:id="@+id/pinView"
-    style="@style/PinWidget.PinView"
+<com.swiftsynq.otpcustomview.CustomOtpView
+    android:id="@+id/otpView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:hint="Hint."
-    android:inputType="text"
-    android:padding="@dimen/common_padding"
-    android:textColor="@color/text_colors"
-    android:textSize="18sp"
     android:cursorVisible="true"
-    app:cursorColor="@color/line_selected"
+    app:cursorColor="@color/colorAccent"
     app:cursorWidth="2dp"
-    app:itemCount="5"
-    app:itemHeight="48dp"
-    app:itemRadius="4dp"
+    app:itemCount="6"
+    app:itemHeight="52dp"
+    app:itemRadius="2dp"
     app:itemSpacing="0dp"
     app:itemWidth="36dp"
+    android:hint="Hello."
+    android:inputType="text"
+    android:padding="@dimen/common_padding"
+    android:textColor="@color/colorBlack"
+    android:textSize="21sp"
     app:lineColor="@color/line_colors"
-    app:lineWidth="2dp"
+    app:lineWidth="1dp"
     app:viewType="rectangle" />
+```
+#### Kotlin
+
+``` Kotlin
+val customOtpView = findViewById(R.id.secondPinView) as PinView
+customOtpView.setTextColor(
+  ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()))
+customOtpView.setTextColor(
+  ResourcesCompat.getColorStateList(getResources(), R.color.text_colors, getTheme()))
+customOtpView.setLineColor(
+  ResourcesCompat.getColor(getResources(), R.color.colorPrimary, getTheme()))
+customOtpView.setLineColor(
+  ResourcesCompat.getColorStateList(getResources(), R.color.line_colors, getTheme()))
+customOtpView.setItemCount(4)
+customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size))
+customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size))
+customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius))
+customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing))
+customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width))
+customOtpView.setAnimationEnable(true)// start animation when adding text
+customOtpView.setCursorVisible(false)
+customOtpView.setCursorColor(
+  ResourcesCompat.getColor(getResources(), R.color.line_selected, getTheme()))
+customOtpView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_cursor_width))
+customOtpView.addTextChangedListener(object:TextWatcher() {
+})
 ```
 
 #### Java
 
 ``` Java
-PinView pinView = (PinView) findViewById(R.id.secondPinView);
-pinView.setTextColor(
+CustomOtpView customOtpView = (PinView) findViewById(R.id.secondPinView);
+customOtpView.setTextColor(
         ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()));
-pinView.setTextColor(
+customOtpView.setTextColor(
         ResourcesCompat.getColorStateList(getResources(), R.color.text_colors, getTheme()));
-pinView.setLineColor(
+customOtpView.setLineColor(
         ResourcesCompat.getColor(getResources(), R.color.colorPrimary, getTheme()));
-pinView.setLineColor(
+customOtpView.setLineColor(
         ResourcesCompat.getColorStateList(getResources(), R.color.line_colors, getTheme()));
-pinView.setItemCount(4);
-pinView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
-pinView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
-pinView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius));
-pinView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing));
-pinView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width));
-pinView.setAnimationEnable(true);// start animation when adding text
-pinView.setCursorVisible(false);
-pinView.setCursorColor(
+customOtpView.setItemCount(4);
+customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
+customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
+customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius));
+customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing));
+customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width));
+customOtpView.setAnimationEnable(true);// start animation when adding text
+customOtpView.setCursorVisible(false);
+customOtpView.setCursorColor(
         ResourcesCompat.getColor(getResources(), R.color.line_selected, getTheme()));
-pinView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_cursor_width));
-pinView.addTextChangedListener(new TextWatcher() {...});
+customOtpView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_cursor_width));
+customOtpView.addTextChangedListener(new TextWatcher() {...});
 ```
 
 ### Step 2:
 
-Specifies `pinViewStyle` in your theme,
+Specifies `otpViewStyle` in your theme,
 
 ``` xml
 <style name="AppTheme" parent="Theme.AppCompat.Light">
     ...
-    <item name="pinViewStyle">@style/PinWidget.PinView</item>
+    <item name="otpViewStyle">@style/OtpWidget.CustomOtpView</item>
 </style>
 ```
 
-or use the `PinWidget.PinView` style.
+or use the `OtpWidget.CustomOtpView` style.
 
 ``` xml
 <com.chaos.view.PinView
-    android:id="@+id/pinView"
+    android:id="@+id/otpView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    style="@style/PinWidget.PinView" />
+    style="@style/OtpWidget.CustomOtpView" />
 ```
 
 ### Step 3 (Optional):
@@ -135,7 +161,7 @@ or add `android:cursorVisible="true"`.
 ## License
 
 
-    Copyright 2017 Chaos Leong
+    Copyright 2018 Temidayo Adefioye
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
