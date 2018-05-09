@@ -123,7 +123,7 @@ Specifies `otpViewStyle` in your theme,
 or use the `OtpWidget.CustomOtpView` style.
 
 ``` xml
-<com.chaos.view.PinView
+<com.swiftsynq.otpcustomview.CustomOtpView
     android:id="@+id/otpView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
