@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Chaos Leong
+ * Copyright 2018 Temiodayo Adefioye
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,8 +42,8 @@ import android.view.inputmethod.EditorInfo
 /**
  * Provides a widget for enter PIN/OTP/password etc.
  *
- * @author Chaos Leong
- * 01/04/2017
+ * @author Temidayo Adefioye
+ * 08/05/2018
  */
 class CustomOtpView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = R.attr.otpViewStyle) : AppCompatEditText(context, attrs, defStyleAttr) {
 

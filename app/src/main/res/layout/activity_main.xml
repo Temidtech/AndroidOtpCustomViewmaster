@@ -14,7 +14,7 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="20dp"
         android:cursorVisible="false"
-        android:inputType="number"
+        android:inputType="numberPassword"
         android:textColor="@color/colorPrimary"
         app:itemCount="6"
         app:layout_constraintBottom_toTopOf="@+id/secondPinView"
