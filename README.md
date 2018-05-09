@@ -1,4 +1,7 @@
-[![](https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster.svg)](https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster)
+<p> <a href="https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster"><img src="https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster/month.svg"/></a>[![](https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster.svg)](https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster)
+	 <a href="https://android-arsenal.com/api?level=11"> <img src="https://img.shields.io/badge/API-14%2B-blue.svg?style=flat" /></a>
+	 <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+	</p>
 # AndroidOtpCustomViewmaster
 
 This is custom input widget for OTP and passwords. It's beautiful and easy to you!
