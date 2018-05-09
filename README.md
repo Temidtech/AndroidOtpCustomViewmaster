@@ -17,6 +17,8 @@ Kotlin Language
 ## Dependency
 
 ``` Groovy
+Add it in your root build.gradle at the end of repositories:
+
 allprojects {
 	repositories {
 		...
@@ -24,6 +26,8 @@ allprojects {
 	}
 }
 ... 
+Add this dependency:
+
 dependencies {
 	        compile 'com.github.Temidtech:AndroidOtpCustomViewmaster:1.0'
 }
