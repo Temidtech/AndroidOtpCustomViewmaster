@@ -17,12 +17,17 @@ Kotlin Language
 ## Dependency
 
 ``` Groovy
-repositories {
-    maven {
-        jcenter()
-    }
+Add it in your root build.gradle at the end of repositories:
+
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ... 
+Add this dependency:
+
 dependencies {
 	        compile 'com.github.Temidtech:AndroidOtpCustomViewmaster:1.0'
 }
