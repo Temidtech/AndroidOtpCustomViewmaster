@@ -63,7 +63,7 @@ Include OtpCustomView in your layout.
 #### Kotlin
 
 ``` Kotlin
-val customOtpView = findViewById(R.id.secondPinView) as PinView
+val customOtpView = findViewById(R.id.secondPinView) as CustomOtpView
 customOtpView.setTextColor(
   ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()))
 customOtpView.setTextColor(
@@ -73,11 +73,11 @@ customOtpView.setLineColor(
 customOtpView.setLineColor(
   ResourcesCompat.getColorStateList(getResources(), R.color.line_colors, getTheme()))
 customOtpView.setItemCount(4)
-customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size))
-customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size))
-customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius))
-customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing))
-customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width))
+customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_radius))
+customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_spacing))
+customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_line_width))
 customOtpView.setAnimationEnable(true)// start animation when adding text
 customOtpView.setCursorVisible(false)
 customOtpView.setCursorColor(
@@ -90,7 +90,7 @@ customOtpView.addTextChangedListener(object:TextWatcher() {
 #### Java
 
 ``` Java
-CustomOtpView customOtpView = (PinView) findViewById(R.id.secondPinView);
+CustomOtpView customOtpView = (CustomOtpView) findViewById(R.id.secondPinView);
 customOtpView.setTextColor(
         ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()));
 customOtpView.setTextColor(
@@ -100,16 +100,16 @@ customOtpView.setLineColor(
 customOtpView.setLineColor(
         ResourcesCompat.getColorStateList(getResources(), R.color.line_colors, getTheme()));
 customOtpView.setItemCount(4);
-customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
-customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
-customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius));
-customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing));
-customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width));
+customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_radius))
+customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_spacing))
+customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_line_width))
 customOtpView.setAnimationEnable(true);// start animation when adding text
 customOtpView.setCursorVisible(false);
 customOtpView.setCursorColor(
         ResourcesCompat.getColor(getResources(), R.color.line_selected, getTheme()));
-customOtpView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_cursor_width));
+customOtpView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_cursor_width));
 customOtpView.addTextChangedListener(new TextWatcher() {...});
 ```
 
@@ -159,7 +159,7 @@ or add `android:cursorVisible="true"`.
 * **itemSpacing**, the spacing between two items.
 * **lineWidth**, the line (border) width.
 * **lineColor**, the line (border) colors.
-* **viewType**, the view type of PinView, currently this will be one of `rectangle` or `line`.
+* **viewType**, the view type of CustomOtpView, currently this will be one of `rectangle` or `line`.
 * **cursorColor**, the cursor color.
 * **cursorWidth**, the width of cursor.
 
