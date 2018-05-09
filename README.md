@@ -17,10 +17,11 @@ Kotlin Language
 ## Dependency
 
 ``` Groovy
-repositories {
-    maven {
-        jcenter()
-    }
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ... 
 dependencies {
