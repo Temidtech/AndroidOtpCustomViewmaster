@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Android-OtpCustomView-master</string>
+    <string name="app_name">One Time Password</string>
+    <string name="sms_notification">Waiting to automatically detect an sms sent to your mobile phone</string>
 </resources>
