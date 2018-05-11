@@ -8,7 +8,7 @@
 This is custom input widget for OTP and passwords. It's beautiful and easy to you!
 
 <p><img src="screenshots/Screenshot_1525807845.png" width="35%" />
-	<img src="screenshots/Screenshot_1525819872.png" width="35%" /><img src="screenshots/Screenshot_1525819872.png" width="35%" /></p>
+	<img src="screenshots/Screenshot_1525819872.png" width="35%" /><img src="screenshots/otp_screen.png" width="35%" /></p>
 
 ## Language
 
