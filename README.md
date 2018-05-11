@@ -1,4 +1,8 @@
-[![](https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster.svg)](https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster)
+<p> <a href="https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster"><img src="https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster/month.svg"/></a>	
+	 <a href="https://jitpack.io/#Temidtech/AndroidOtpCustomViewmaster"> <img src="https://jitpack.io/v/Temidtech/AndroidOtpCustomViewmaster.svg" /></a>
+	 <a href="https://android-arsenal.com/api?level=11"> <img src="https://img.shields.io/badge/API-14%2B-blue.svg?style=flat" /></a>
+	 <a href="https://opensource.org/licenses/Apache-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg"/></a>
+	</p>
 # AndroidOtpCustomViewmaster
 
 This is custom input widget for OTP and passwords. It's beautiful and easy to you!
@@ -13,12 +17,17 @@ Kotlin Language
 ## Dependency
 
 ``` Groovy
-repositories {
-    maven {
-        jcenter()
-    }
+Add it in your root build.gradle at the end of repositories:
+
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ... 
+Add this dependency:
+
 dependencies {
 	        compile 'com.github.Temidtech:AndroidOtpCustomViewmaster:1.0'
 }
@@ -59,7 +68,7 @@ Include OtpCustomView in your layout.
 #### Kotlin
 
 ``` Kotlin
-val customOtpView = findViewById(R.id.secondPinView) as PinView
+val customOtpView = findViewById(R.id.secondPinView) as CustomOtpView
 customOtpView.setTextColor(
   ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()))
 customOtpView.setTextColor(
@@ -69,11 +78,11 @@ customOtpView.setLineColor(
 customOtpView.setLineColor(
   ResourcesCompat.getColorStateList(getResources(), R.color.line_colors, getTheme()))
 customOtpView.setItemCount(4)
-customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size))
-customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size))
-customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius))
-customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing))
-customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width))
+customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_radius))
+customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_spacing))
+customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_line_width))
 customOtpView.setAnimationEnable(true)// start animation when adding text
 customOtpView.setCursorVisible(false)
 customOtpView.setCursorColor(
@@ -86,7 +95,7 @@ customOtpView.addTextChangedListener(object:TextWatcher() {
 #### Java
 
 ``` Java
-CustomOtpView customOtpView = (PinView) findViewById(R.id.secondPinView);
+CustomOtpView customOtpView = (CustomOtpView) findViewById(R.id.secondPinView);
 customOtpView.setTextColor(
         ResourcesCompat.getColor(getResources(), R.color.colorAccent, getTheme()));
 customOtpView.setTextColor(
@@ -96,16 +105,16 @@ customOtpView.setLineColor(
 customOtpView.setLineColor(
         ResourcesCompat.getColorStateList(getResources(), R.color.line_colors, getTheme()));
 customOtpView.setItemCount(4);
-customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
-customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_size));
-customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_radius));
-customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_spacing));
-customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_item_line_width));
+customOtpView.setItemHeight(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_size))
+customOtpView.setItemRadius(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_radius))
+customOtpView.setItemSpacing(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_spacing))
+customOtpView.setLineWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_item_line_width))
 customOtpView.setAnimationEnable(true);// start animation when adding text
 customOtpView.setCursorVisible(false);
 customOtpView.setCursorColor(
         ResourcesCompat.getColor(getResources(), R.color.line_selected, getTheme()));
-customOtpView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.pv_pin_view_cursor_width));
+customOtpView.setCursorWidth(getResources().getDimensionPixelSize(R.dimen.otp_customotp_view_cursor_width));
 customOtpView.addTextChangedListener(new TextWatcher() {...});
 ```
 
@@ -123,7 +132,7 @@ Specifies `otpViewStyle` in your theme,
 or use the `OtpWidget.CustomOtpView` style.
 
 ``` xml
-<com.chaos.view.PinView
+<com.swiftsynq.otpcustomview.CustomOtpView
     android:id="@+id/otpView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -155,7 +164,7 @@ or add `android:cursorVisible="true"`.
 * **itemSpacing**, the spacing between two items.
 * **lineWidth**, the line (border) width.
 * **lineColor**, the line (border) colors.
-* **viewType**, the view type of PinView, currently this will be one of `rectangle` or `line`.
+* **viewType**, the view type of CustomOtpView, currently this will be one of `rectangle` or `line`.
 * **cursorColor**, the cursor color.
 * **cursorWidth**, the width of cursor.
 
